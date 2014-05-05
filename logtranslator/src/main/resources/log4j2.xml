@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<configuration>-->
+    <!--<appenders>-->
+        <!--<Console name="Console" target="SYSTEM_OUT">-->
+            <!--<PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>-->
+        <!--</Console>-->
+    <!--</appenders>-->
+    <!--<loggers>-->
+        <!--<root level="error">-->
+            <!--<appender-ref ref="Console"/>-->
+        <!--</root>-->
+    <!--</loggers>-->
+<!--</configuration>-->
+
+
+<configuration>
+  <appenders>
+    <File name="file" fileName="/tmp/Hadoop-LogTranslator.log">
+      <PatternLayout pattern="%d %-5p %c - %m%n"/>
+    </File>
+  </appenders>
+  <loggers>
+    <root level="debug">
+      <appender-ref ref="file"/>
+    </root>
+  </loggers>
+</configuration>
